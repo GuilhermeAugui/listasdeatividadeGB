@@ -1,3 +1,4 @@
+# 1
 import math
 class figuraGeometricas():
     def __init__(self):
@@ -126,3 +127,38 @@ print('O valor da area do triangulo é',tri.calculaArea())
 print('O valor do perimetro do triangulo é',tri.calculaPerimetro())
 print('O valor da area do circulo é',cir.calculaArea())
 print('O valor do perimetro do circulo é', cir.calculaPerimetro())
+# 2
+class Veiculo:
+    def __init__(self, marca, modelo, ano):
+        self._marca= marca
+        self._modelo= modelo
+        self._ano= ano
+    def acelerar(self):
+        print('O carro está sendo acelerado')
+    def frear(self):
+        print('O carro está freando')
+class carro(Veiculo):
+    def __init__(self, marca, modelo, ano, cor):
+        super().__init__(marca, modelo, ano)   
+        self._cor= cor
+    def ligarRadio():
+        print('Radio ligado')
+    def abrirPorta():
+        print('Abrindo a porta do carro')
+class moto(Veiculo):
+    def __init__(self, marca, modelo, ano, cilindrada):
+        super().__init__(marca, modelo, ano)                              
+        self._cilindrada= cilindrada
+    def empinar(slef):
+        print('A moto esta sendo empinada')
+    def buzinar(self):
+        print('A buzina da moto esta sendo tocada')
+class caminhao(Veiculo):
+    def __init__(self, marca, modelo, ano, cargaMaxima):
+        super().__init__(marca, modelo, ano)            
+        self._cargaMaxima= cargaMaxima
+    def carregar(self):
+        print('O caminhao esta sendo carregado')
+    def descaregar(self):
+        print('O caminha está sendo descaregado')
+                   

@@ -141,9 +141,9 @@ class carro(Veiculo):
     def __init__(self, marca, modelo, ano, cor):
         super().__init__(marca, modelo, ano)   
         self._cor= cor
-    def ligarRadio():
+    def ligarRadio(self):
         print('Radio ligado')
-    def abrirPorta():
+    def abrirPorta(self):
         print('Abrindo a porta do carro')
 class moto(Veiculo):
     def __init__(self, marca, modelo, ano, cilindrada):
@@ -161,4 +161,27 @@ class caminhao(Veiculo):
         print('O caminhao esta sendo carregado')
     def descaregar(self):
         print('O caminha está sendo descaregado')
-                   
+C1marca=input('Informe a marca do carro? ')
+C1modelo= input('Informe qual é o modelo do carro? ')
+C1ano= input('Qual é o ano do carro?')
+C1cor= input('Qual é a cor do carro')
+c1= Veiculo(C1marca,C1modelo,C1ano)
+c1=carro(C1marca,C1modelo,C1ano,C1cor)
+c1.ligarRadio()
+c1.abrirPorta()
+M1marca=input('Informe a marca da moto? ')
+M1modelo= input('Informe qual é o modelo da moto? ')
+M1ano= input('Qual é o ano da moto?')
+M1cilindrada= input('Quantas cilindradas tem o motor da moto?')
+m1= Veiculo(M1marca,M1modelo,M1ano)
+m1=moto(M1marca,M1modelo,M1ano,M1cilindrada)
+m1.buzinar()
+m1.empinar()
+CA1marca=input('Informe a marca do caminhao? ')
+CA1modelo= input('Informe qual é o modelo do caminhao? ')
+CA1ano= input('Qual é o ano do caminhao?')
+CA1cargaMaxima= input('Quantos quilos o caminhao pode levar? ')
+ca1= Veiculo(CA1marca,CA1modelo,CA1ano)
+ca1=caminhao(CA1marca,CA1modelo,CA1ano,CA1cargaMaxima)
+ca1.carregar()
+ca1.descaregar()
